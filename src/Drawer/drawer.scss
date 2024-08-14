@@ -1,0 +1,101 @@
+$border-color: #ccc;
+$input-border-color: #ddd;
+$button-bg-color: #2831a7;       // Màu xanh dương
+$button-hover-bg-color: #216488; // Màu xanh dương nhạt
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    margin-top: 300px;
+}
+
+.section {
+    margin-bottom: 20px;
+
+    h2 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid $input-border-color;
+        border-radius: 5px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: $button-bg-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $button-hover-bg-color;
+    }
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 26px;
+    right: 26px;
+    background-color: #3498db;   
+    color: #ffffff;            
+    border: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    // font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.floating-button:hover {
+    background-color: #2980b9;    // Màu xanh dương nhạt khi di chuột vào
+}
+
+.floating-button:active {
+    background-color: #1f618d;    // Màu xanh dương sậm khi nút được nhấn
+}
+
+.drawer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drawer.open {
+    transform: translateY(0);
+}
+
+.drawer-content {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
